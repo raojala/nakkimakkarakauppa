@@ -8,7 +8,7 @@ EXPOSE 80
 COPY . ./
 RUN go mod download && go mod verify
 
-RUN apk add chromium
+RUN /sbin/apk add chromium
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 COPY . .
