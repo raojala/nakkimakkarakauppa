@@ -182,7 +182,7 @@ func preRenderPage() {
 	defer cancel()
 
 	err := chromedp.Run(ctx,
-		chromedp.Navigate("http://"+Address),
+		chromedp.Navigate("http://127.0.0.1"+Port+"/"),
 		chromedp.InnerHTML("html", &ResponseHTML, chromedp.NodeVisible, chromedp.ByQuery),
 	)
 	if err != nil {
