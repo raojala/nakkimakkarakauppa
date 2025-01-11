@@ -5,4 +5,4 @@ VOLUME [ "/output" ]
 COPY . /go-src
 
 WORKDIR /go-src
-ENTRYPOINT /usr/local/go/bin/go build -o /output/main main
+RUN /usr/local/go/bin/go build -o /output/main
