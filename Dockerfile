@@ -9,7 +9,7 @@ COPY . ./
 RUN go mod download && go mod verify
 
 RUN apk add --no-cache chromium
-ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 COPY . .
 RUN go build -v -o /usr/local/bin/app ./...
