@@ -5,4 +5,4 @@ VOLUME [ "/output" ]
 COPY . /go-src
 
 WORKDIR /go-src
-ENTRYPOINT ["/usr/local/go/bin/go", "build", "-o", "/output/main", "main"]
+ENTRYPOINT ["/usr/local/go/bin/go", "build", "-o", "/output/main", "main", "main"]
