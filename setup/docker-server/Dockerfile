@@ -1,4 +1,4 @@
-FROM alpine3.21.2
+FROM alpine:3.16
 
 EXPOSE 80
 

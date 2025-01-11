@@ -1,4 +1,4 @@
-FROM golang:alpine3.21
+FROM golang:alpine3.16
 
 VOLUME [ "/output" ]
 
