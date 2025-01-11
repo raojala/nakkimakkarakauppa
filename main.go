@@ -10,7 +10,7 @@ func main() {
 		fmt.Fprintf(w, "Hello, World!")
 	})
 
-	if err := http.ListenAndServe(":3333", nil); err != nil {
+	if err := http.ListenAndServe(":80", nil); err != nil {
 		fmt.Println("Error starting server:", err)
 	}
 }
