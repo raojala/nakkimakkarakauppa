@@ -1,4 +1,4 @@
-FROM golang:1.23
+FROM golang:golang:1.23-alpine3.21
 
 WORKDIR /usr/src/app
 
@@ -8,7 +8,7 @@ EXPOSE 80
 COPY . ./
 RUN go mod download && go mod verify
 
-RUN /sbin/apk add chromium
+RUN apk add chromium
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 COPY . .
