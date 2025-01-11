@@ -14,7 +14,7 @@ import (
 )
 
 var RenderedHTML = ""
-var Address = "localhost:9000"
+var Address = ":80"
 
 var applicationMainContext context.Context
 var mainAppCtxCancel context.CancelFunc
